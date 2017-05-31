@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YetAnotherShoppingApp", "YetAnotherShoppingApp\YetAnotherShoppingApp.csproj", "{DCAEE5D9-8024-4B51-8BC7-0AF922D19AC6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AC1B8659-46B5-4035-98F6-C5420F09662F}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		CONTRIBUTING.md = CONTRIBUTING.md
+		LICENSE = LICENSE
+		README.md = README.md
+		ThirdPartyNotices.txt = ThirdPartyNotices.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DCAEE5D9-8024-4B51-8BC7-0AF922D19AC6}.Debug|ARM.ActiveCfg = Debug|ARM
+		{DCAEE5D9-8024-4B51-8BC7-0AF922D19AC6}.Debug|ARM.Build.0 = Debug|ARM
+		{DCAEE5D9-8024-4B51-8BC7-0AF922D19AC6}.Debug|ARM.Deploy.0 = Debug|ARM
+		{DCAEE5D9-8024-4B51-8BC7-0AF922D19AC6}.Debug|x64.ActiveCfg = Debug|x64
+		{DCAEE5D9-8024-4B51-8BC7-0AF922D19AC6}.Debug|x64.Build.0 = Debug|x64
+		{DCAEE5D9-8024-4B51-8BC7-0AF922D19AC6}.Debug|x64.Deploy.0 = Debug|x64
+		{DCAEE5D9-8024-4B51-8BC7-0AF922D19AC6}.Debug|x86.ActiveCfg = Debug|x86
+		{DCAEE5D9-8024-4B51-8BC7-0AF922D19AC6}.Debug|x86.Build.0 = Debug|x86
+		{DCAEE5D9-8024-4B51-8BC7-0AF922D19AC6}.Debug|x86.Deploy.0 = Debug|x86
+		{DCAEE5D9-8024-4B51-8BC7-0AF922D19AC6}.Release|ARM.ActiveCfg = Release|ARM
+		{DCAEE5D9-8024-4B51-8BC7-0AF922D19AC6}.Release|ARM.Build.0 = Release|ARM
+		{DCAEE5D9-8024-4B51-8BC7-0AF922D19AC6}.Release|ARM.Deploy.0 = Release|ARM
+		{DCAEE5D9-8024-4B51-8BC7-0AF922D19AC6}.Release|x64.ActiveCfg = Release|x64
+		{DCAEE5D9-8024-4B51-8BC7-0AF922D19AC6}.Release|x64.Build.0 = Release|x64
+		{DCAEE5D9-8024-4B51-8BC7-0AF922D19AC6}.Release|x64.Deploy.0 = Release|x64
+		{DCAEE5D9-8024-4B51-8BC7-0AF922D19AC6}.Release|x86.ActiveCfg = Release|x86
+		{DCAEE5D9-8024-4B51-8BC7-0AF922D19AC6}.Release|x86.Build.0 = Release|x86
+		{DCAEE5D9-8024-4B51-8BC7-0AF922D19AC6}.Release|x86.Deploy.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

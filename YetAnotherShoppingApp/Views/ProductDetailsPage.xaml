@@ -1,0 +1,160 @@
+﻿<!--
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+The MIT License (MIT)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+-->
+<Page
+    x:Class="YetAnotherShoppingApp.ProductDetailsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:YetAnotherShoppingApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    >
+    <Grid
+        Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+        Padding="8"
+        >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <local:AppBanner
+            Grid.Row="0"
+            />
+        <StackPanel
+            Grid.Row="1"
+            >
+            <TextBlock
+                Text="{x:Bind Path=ViewModel.Product.Title, FallbackValue='PRODUCT TITLE'}"
+                FontWeight="Bold"
+                FontSize="40"
+                TextWrapping="WrapWholeWords"
+                />
+            <TextBlock
+                FontFamily="Segoe UI Emoji"
+                Text="{x:Bind Path=ViewModel.Product.ImageEmojiText, Mode=OneWay, FallbackValue=&#x263A;}"
+                FontSize="200"
+                LineHeight="225"
+                LineStackingStrategy="BlockLineHeight"
+                IsColorFontEnabled="true"
+                Foreground="Red"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                />
+            <TextBlock
+                Text="{x:Bind Path=ViewModel.Product.Description, FallbackValue='THE LONG PRODUCT DESCRIPTION'}"
+                TextWrapping="WrapWholeWords"
+                />
+            <Rectangle
+                Height="1"
+                RadiusY="2"
+                RadiusX="2"
+                Fill="#3F000000"
+                Margin="0,8"
+                />
+            <StackPanel
+                Orientation="Horizontal"
+                >
+                <TextBlock
+                    Text="Price:"
+                    FontSize="18"
+                    VerticalAlignment="Top"
+                    />
+                <Rectangle
+                    Width="8"
+                    />
+                <StackPanel
+                    Orientation="Vertical"
+                    >
+                    <TextBlock
+                        Text="{x:Bind Path=ViewModel.ProductViewModel.PriceString, Mode=OneWay, FallbackValue='PRICE'}"
+                        HorizontalAlignment="Stretch"
+                        TextAlignment="Left"
+                        Foreground="Maroon"
+                        FontWeight="Bold"
+                        FontSize="18"
+                        />
+                    <TextBlock
+                        Text="{x:Bind Path=ViewModel.ProductViewModel.ShippingPriceString, Mode=OneWay, FallbackValue='SHIPPING COST'}"
+                        Visibility="{x:Bind Path=ViewModel.ProductViewModel.ShippingPriceVisibility}"
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Center"
+                        TextAlignment="Right"
+                        Style="{ThemeResource BaseTextBlockStyle}"
+                        FontWeight="SemiBold"
+                        FontSize="12"
+                        />
+                </StackPanel>
+            </StackPanel>
+            <Rectangle
+                Height="1"
+                RadiusY="2"
+                RadiusX="2"
+                Fill="#3F000000"
+                Margin="0,8"
+                />
+            <StackPanel
+                HorizontalAlignment="Left"
+                >
+                <StackPanel
+                    Orientation="Horizontal"
+                    >
+                    <TextBlock
+                        Text="Qty:"
+                        VerticalAlignment="Center"
+                        />
+                    <Rectangle
+                        Width="8"
+                        />
+                    <ComboBox
+                        ItemsSource="{x:Bind Path=ViewModel.QuantityList, Mode=OneWay}"
+                        SelectedItem="{x:Bind Path=ViewModel.SelectedQuantity, Mode=TwoWay}"
+                        />
+                </StackPanel>
+                <Rectangle
+                    Height="8"
+                    />
+                <Button
+                    HorizontalAlignment="Stretch"
+                    Click="AddToCartClick"
+                    >
+                    <Button.Content>
+                        <TextBlock
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Stretch"
+                            TextAlignment="Center"
+                            >
+                            <Run
+                                FontFamily="Segoe MDL2 Assets"
+                                Text="&#xe7bf;  "
+                                />
+                            <Run
+                                Text="Add to cart"
+                                />
+                        </TextBlock>
+                    </Button.Content>
+                </Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>
