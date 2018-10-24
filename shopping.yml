@@ -1,0 +1,13 @@
+### YamlMime:Sample
+sample:
+- name: Payment Request API Sample App
+  description: A UWP mini-app that presents a basic shopping experience where a user can buy emoji. This app shows how to use the
+Payment Request APIs to implement the checkout experience.
+  image: Images/shoppingcart.png
+  generateZip: true
+  author: cwize1
+  languages:
+  - csharp
+  technologies:
+  - windows
+  vssolution: YetAnotherShoppingApp.sln
