@@ -1,4 +1,13 @@
-﻿# Payment Request API Sample App
+---
+topic: sample
+languages:
+- csharp
+products:
+- windows
+- uwp
+---
+
+# Payment Request API Sample App
 
 A mini-app that presents a basic shopping experience where a user can buy emoji. This app shows how to use the
 [Payment Request APIs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.payments) to implement the checkout experience. It also demonstrates a basic multi-page XAML UI that uses
